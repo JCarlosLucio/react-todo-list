@@ -12,12 +12,25 @@ export default class Todo extends Component {
     this.props.deleteTodo(this.props.id);
   }
   render() {
-    return (
-      <div>
-        <span>{this.props.todo}</span>
-        <button>Edit</button>
-        <button onClick={this.handleDeleteTodo}>X</button>
-      </div>
-    );
+    let result;
+    if (this.state.isEditing) {
+      result = (
+        <div>
+          <form>
+            <input type="text" />
+            <button>Save</button>
+          </form>
+        </div>
+      );
+    } else {
+      result = (
+        <div>
+          <span>{this.props.todo}</span>
+          <button>Edit</button>
+          <button onClick={this.handleDeleteTodo}>X</button>
+        </div>
+      );
+    }
+    return result;
   }
 }
