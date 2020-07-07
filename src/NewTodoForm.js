@@ -6,7 +6,13 @@ export default class NewTodoForm extends Component {
     this.state = {
       newTodo: '',
     };
+    this.handleSubmit = this.handleSubmit.bind(this);
     this.handleChange = this.handleChange.bind(this);
+  }
+  handleSubmit(evt) {
+    evt.preventDefault();
+    this.props.addTodo(this.state);
+    this.setState({ newTodo: '' });
   }
   handleChange(evt) {
     this.setState({
@@ -15,7 +21,7 @@ export default class NewTodoForm extends Component {
   }
   render() {
     return (
-      <form>
+      <form onSubmit={this.handleSubmit}>
         <label htmlFor="newTodo">New Todo</label>
         <input
           type="text"
