@@ -12,6 +12,7 @@ export default class Todo extends Component {
     return (
       <div>
         <span>{this.props.todo}</span>
+        <button>Edit</button>
         <button onClick={this.handleDeleteTodo}>X</button>
       </div>
     );
