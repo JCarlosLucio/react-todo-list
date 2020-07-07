@@ -3,6 +3,9 @@ import React, { Component } from 'react';
 export default class Todo extends Component {
   constructor(props) {
     super(props);
+    this.state = {
+      isEditing: false,
+    };
     this.handleDeleteTodo = this.handleDeleteTodo.bind(this);
   }
   handleDeleteTodo() {
