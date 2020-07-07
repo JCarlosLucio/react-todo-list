@@ -12,7 +12,7 @@ export default class NewTodoForm extends Component {
   }
   handleSubmit(evt) {
     evt.preventDefault();
-    this.props.addTodo({ ...this.state, id: uuidv4() });
+    this.props.addTodo({ ...this.state, id: uuidv4(), done: false });
     this.setState({ newTodo: '' });
   }
   handleChange(evt) {
