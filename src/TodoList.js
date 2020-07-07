@@ -9,10 +9,14 @@ export default class TodoList extends Component {
       todos: [],
     };
     this.addTodo = this.addTodo.bind(this);
+    this.deleteTodo = this.deleteTodo.bind(this);
   }
 
   addTodo(newTodo) {
     this.setState({ todos: [...this.state.todos, newTodo] });
+  }
+  deleteTodo(id) {
+    this.setState({ todos: this.state.todos.filter((todo) => todo.id !== id) });
   }
 
   render() {
@@ -20,7 +24,14 @@ export default class TodoList extends Component {
       <div>
         <h1>Todo List</h1>
         <NewTodoForm addTodo={this.addTodo} />
-        {this.state.todos.map((t) => <Todo key={t.id} todo={t.newTodo} />)}
+        {this.state.todos.map((todo) => (
+          <Todo
+            key={todo.id}
+            id={todo.id}
+            todo={todo.newTodo}
+            deleteTodo={this.deleteTodo}
+          />
+        ))}
       </div>
     );
   }
