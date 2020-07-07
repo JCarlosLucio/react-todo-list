@@ -49,7 +49,9 @@ export default class Todo extends Component {
     } else {
       result = (
         <div>
-          <span>{this.props.todo}</span>
+          <span className={this.props.done && 'Todo-done'}>
+            {this.props.todo}
+          </span>
           <button onClick={this.toggleForm}>Edit</button>
           <button onClick={this.handleDeleteTodo}>X</button>
         </div>
