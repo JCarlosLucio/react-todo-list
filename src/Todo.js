@@ -5,6 +5,7 @@ export default class Todo extends Component {
     super(props);
     this.state = {
       isEditing: false,
+      updatedTodo: '',
     };
     this.handleDeleteTodo = this.handleDeleteTodo.bind(this);
     this.toggleForm = this.toggleForm.bind(this);
@@ -21,7 +22,12 @@ export default class Todo extends Component {
       result = (
         <div>
           <form>
-            <input type="text" />
+            <input
+              type="text"
+              name="updatedTodo"
+              placeholder="Edit Todo"
+              value={this.state.updatedTodo}
+            />
             <button>Save</button>
           </form>
         </div>
