@@ -55,7 +55,7 @@ export default class Todo extends Component {
         <div>
           <span
             onClick={this.handleToggleDone}
-            className={this.props.done && 'Todo-done'}
+            className={this.props.done ? 'Todo-done' : undefined}
           >
             {this.props.todo}
           </span>
