@@ -5,14 +5,20 @@ export default class Todo extends Component {
     super(props);
     this.state = {
       isEditing: false,
-      updatedTodo: '',
+      updatedTodo: this.props.todo,
     };
     this.handleDeleteTodo = this.handleDeleteTodo.bind(this);
+    this.handleUpdateTodo = this.handleUpdateTodo.bind(this);
     this.handleChange = this.handleChange.bind(this);
     this.toggleForm = this.toggleForm.bind(this);
   }
   handleDeleteTodo() {
     this.props.deleteTodo(this.props.id);
+  }
+  handleUpdateTodo(evt) {
+    evt.preventDefault();
+    this.props.updateTodo(this.props.id, this.state.updatedTodo);
+    this.toggleForm();
   }
   handleChange(evt) {
     this.setState({
@@ -27,7 +33,7 @@ export default class Todo extends Component {
     if (this.state.isEditing) {
       result = (
         <div>
-          <form>
+          <form onSubmit={this.handleUpdateTodo}>
             <input
               type="text"
               name="updatedTodo"
