@@ -11,7 +11,13 @@ export default class NewTodoForm extends Component {
     return (
       <form>
         <label htmlFor="newTodo">New Todo</label>
-        <input type="text" id="newTodo" name="newTodo" placeholder="New Todo" />
+        <input
+          type="text"
+          id="newTodo"
+          name="newTodo"
+          placeholder="New Todo"
+          value={this.state.newTodo}
+        />
         <button>ADD TODO</button>
       </form>
     );
