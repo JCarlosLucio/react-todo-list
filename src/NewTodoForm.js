@@ -6,6 +6,12 @@ export default class NewTodoForm extends Component {
     this.state = {
       newTodo: '',
     };
+    this.handleChange = this.handleChange.bind(this);
+  }
+  handleChange(evt) {
+    this.setState({
+      [evt.target.name]: evt.target.value,
+    });
   }
   render() {
     return (
@@ -17,6 +23,7 @@ export default class NewTodoForm extends Component {
           name="newTodo"
           placeholder="New Todo"
           value={this.state.newTodo}
+          onChange={this.handleChange}
         />
         <button>ADD TODO</button>
       </form>
