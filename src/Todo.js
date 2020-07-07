@@ -8,10 +8,16 @@ export default class Todo extends Component {
       updatedTodo: '',
     };
     this.handleDeleteTodo = this.handleDeleteTodo.bind(this);
+    this.handleChange = this.handleChange.bind(this);
     this.toggleForm = this.toggleForm.bind(this);
   }
   handleDeleteTodo() {
     this.props.deleteTodo(this.props.id);
+  }
+  handleChange(evt) {
+    this.setState({
+      [evt.target.name]: evt.target.value,
+    });
   }
   toggleForm() {
     this.setState({ isEditing: !this.state.isEditing });
@@ -27,6 +33,7 @@ export default class Todo extends Component {
               name="updatedTodo"
               placeholder="Edit Todo"
               value={this.state.updatedTodo}
+              onChange={this.handleChange}
             />
             <button>Save</button>
           </form>
