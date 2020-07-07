@@ -8,13 +8,18 @@ export default class TodoList extends Component {
     this.state = {
       todos: [],
     };
+    this.addTodo = this.addTodo.bind(this);
+  }
+
+  addTodo(newTodo) {
+    this.setState({ todos: [...this.state.todos, newTodo] });
   }
 
   render() {
     return (
       <div>
         <h1>Todo List</h1>
-        <NewTodoForm />
+        <NewTodoForm addTodo={this.addTodo} />
         <Todo />
       </div>
     );
