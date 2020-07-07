@@ -7,9 +7,13 @@ export default class Todo extends Component {
       isEditing: false,
     };
     this.handleDeleteTodo = this.handleDeleteTodo.bind(this);
+    this.toggleForm = this.toggleForm.bind(this);
   }
   handleDeleteTodo() {
     this.props.deleteTodo(this.props.id);
+  }
+  toggleForm() {
+    this.setState({ isEditing: !this.state.isEditing });
   }
   render() {
     let result;
@@ -26,7 +30,7 @@ export default class Todo extends Component {
       result = (
         <div>
           <span>{this.props.todo}</span>
-          <button>Edit</button>
+          <button onClick={this.toggleForm}>Edit</button>
           <button onClick={this.handleDeleteTodo}>X</button>
         </div>
       );
