@@ -10,6 +10,7 @@ export default class TodoList extends Component {
     };
     this.addTodo = this.addTodo.bind(this);
     this.deleteTodo = this.deleteTodo.bind(this);
+    this.updateTodo = this.updateTodo.bind(this);
   }
 
   addTodo(newTodo) {
@@ -18,7 +19,15 @@ export default class TodoList extends Component {
   deleteTodo(id) {
     this.setState({ todos: this.state.todos.filter((todo) => todo.id !== id) });
   }
-
+  updateTodo(id, updatedTodo) {
+    const updatedTodos = this.state.todos.map((todo) => {
+      if (todo.id === id) {
+        return { ...todo, newTodo: updatedTodo };
+      }
+      return todo;
+    });
+    this.setState({ todos: updatedTodos });
+  }
   render() {
     return (
       <div>
@@ -30,6 +39,7 @@ export default class TodoList extends Component {
             id={todo.id}
             todo={todo.newTodo}
             deleteTodo={this.deleteTodo}
+            updateTodo={this.updateTodo}
           />
         ))}
       </div>
