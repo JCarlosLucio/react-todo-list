@@ -20,7 +20,7 @@ export default class TodoList extends Component {
       <div>
         <h1>Todo List</h1>
         <NewTodoForm addTodo={this.addTodo} />
-        <Todo />
+        {this.state.todos.map((t) => <Todo todo={t.newTodo} />)}
       </div>
     );
   }
