@@ -38,6 +38,7 @@ export default class TodoList extends Component {
             key={todo.id}
             id={todo.id}
             todo={todo.newTodo}
+            done={todo.done}
             deleteTodo={this.deleteTodo}
             updateTodo={this.updateTodo}
           />
