@@ -1,6 +1,12 @@
 import React, { Component } from 'react';
 
 export default class NewTodoForm extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      newTodo: '',
+    };
+  }
   render() {
     return (
       <form>
