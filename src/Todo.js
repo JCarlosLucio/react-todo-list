@@ -10,6 +10,7 @@ export default class Todo extends Component {
     };
     this.handleDeleteTodo = this.handleDeleteTodo.bind(this);
     this.handleUpdateTodo = this.handleUpdateTodo.bind(this);
+    this.handleToggleDone = this.handleToggleDone.bind(this);
     this.handleChange = this.handleChange.bind(this);
     this.toggleForm = this.toggleForm.bind(this);
   }
@@ -20,6 +21,9 @@ export default class Todo extends Component {
     evt.preventDefault();
     this.props.updateTodo(this.props.id, this.state.updatedTodo);
     this.toggleForm();
+  }
+  handleToggleDone() {
+    this.props.toggleDone(this.props.id);
   }
   handleChange(evt) {
     this.setState({
@@ -49,7 +53,10 @@ export default class Todo extends Component {
     } else {
       result = (
         <div>
-          <span className={this.props.done && 'Todo-done'}>
+          <span
+            onClick={this.handleToggleDone}
+            className={this.props.done && 'Todo-done'}
+          >
             {this.props.todo}
           </span>
           <button onClick={this.toggleForm}>Edit</button>
