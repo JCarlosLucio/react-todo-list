@@ -58,3 +58,8 @@
 .Todo-btns button:hover {
   color: #fa26a0;
 }
+
+.Todo-edit-form {
+  display: flex;
+  flex-wrap: wrap;
+}
