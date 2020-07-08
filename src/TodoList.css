@@ -8,6 +8,18 @@
   background: #22193a;
 }
 
+.TodoList-header {
+  height: 10rem;
+  border-radius: 1.5rem 1.5rem 0 0;
+  background: linear-gradient(
+      135deg,
+      rgba(109, 25, 252, 0.7) 16.4%,
+      rgba(125, 31, 165, 0.75) 56.1%
+    ),
+    url('https://source.unsplash.com/0aWZdK8nK2I');
+  background-size: cover;
+}
+
 .TodoList ul {
   margin-top: 2rem;
   list-style-type: none;
