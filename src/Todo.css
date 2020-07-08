@@ -9,12 +9,12 @@
   overflow: hidden;
   position: relative;
 }
-
 .Todo:nth-last-child(1) {
   border-radius: 0 0 1.5rem 1.5rem;
 }
 
-.Todo-done {
-  color: grey;
-  text-decoration: line-through;
+.Todo-todo {
+  position: relative;
+  transition: opacity 400ms linear;
+  cursor: pointer;
 }
