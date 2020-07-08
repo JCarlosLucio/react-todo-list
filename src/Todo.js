@@ -59,8 +59,10 @@ export default class Todo extends Component {
           >
             {this.props.todo}
           </li>
-          <button onClick={this.toggleForm}>Edit</button>
-          <button onClick={this.handleDeleteTodo}>X</button>
+          <div className="Todo-btns">
+            <button onClick={this.toggleForm}>Edit</button>
+            <button onClick={this.handleDeleteTodo}>X</button>
+          </div>
         </div>
       );
     }
