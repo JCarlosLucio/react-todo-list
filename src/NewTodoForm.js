@@ -5,7 +5,7 @@ export default class NewTodoForm extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      newTodo: '',
+      todo: '',
     };
     this.handleSubmit = this.handleSubmit.bind(this);
     this.handleChange = this.handleChange.bind(this);
@@ -13,7 +13,7 @@ export default class NewTodoForm extends Component {
   handleSubmit(evt) {
     evt.preventDefault();
     this.props.addTodo({ ...this.state, id: uuidv4(), done: false });
-    this.setState({ newTodo: '' });
+    this.setState({ todo: '' });
   }
   handleChange(evt) {
     this.setState({
@@ -27,9 +27,9 @@ export default class NewTodoForm extends Component {
         <input
           type="text"
           id="newTodo"
-          name="newTodo"
           placeholder="New Todo"
-          value={this.state.newTodo}
+          name="todo"
+          value={this.state.todo}
           onChange={this.handleChange}
         />
         <button>ADD TODO</button>
