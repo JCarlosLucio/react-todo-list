@@ -55,7 +55,7 @@ export default class Todo extends Component {
         <div className="Todo">
           <li
             onClick={this.handleToggleDone}
-            className={this.props.done ? 'Todo-done' : undefined}
+            className={this.props.done ? 'Todo-todo done' : 'Todo-todo'}
           >
             {this.props.todo}
           </li>
