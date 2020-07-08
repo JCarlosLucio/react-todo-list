@@ -40,3 +40,8 @@
     width: calc(100% + 1rem);
   }
 }
+
+.Todo-btns {
+  flex-shrink: 0;
+  padding-left: 0.7em;
+}
