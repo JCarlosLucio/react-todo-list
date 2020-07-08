@@ -45,3 +45,16 @@
   flex-shrink: 0;
   padding-left: 0.7em;
 }
+.Todo-btns button {
+  border: none;
+  font-size: 1.4em;
+  margin: 0.5em;
+  background: none;
+  -webkit-appearance: none;
+  cursor: pointer;
+  color: #fff;
+  transition: color 200ms ease-out;
+}
+.Todo-btns button:hover {
+  color: #fa26a0;
+}
