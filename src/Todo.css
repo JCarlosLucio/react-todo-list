@@ -18,3 +18,25 @@
   transition: opacity 400ms linear;
   cursor: pointer;
 }
+
+.Todo-todo.done {
+  transition: opacity 300ms ease-in-out;
+  transition-delay: 200ms;
+  opacity: 0.5;
+}
+.Todo-todo.done:before {
+  content: "";
+  position: absolute;
+  top: 55%;
+  left: -0.5rem;
+  display: block;
+  width: 0%;
+  height: 2px;
+  background: rgb(255, 255, 255);
+  animation: strikeitem 0.3s ease-in 0s forwards;
+}
+@keyframes strikeitem {
+  to {
+    width: calc(100% + 1rem);
+  }
+}
