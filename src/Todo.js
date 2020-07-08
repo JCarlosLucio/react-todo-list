@@ -61,10 +61,10 @@ export default class Todo extends Component {
           </li>
           <div className="Todo-btns">
             <button onClick={this.toggleForm}>
-              <i class="fas fa-pen-square" />
+              <i className="fas fa-pen-square" />
             </button>
             <button onClick={this.handleDeleteTodo}>
-              <i class="fas fa-times-circle" />
+              <i className="fas fa-times-circle" />
             </button>
           </div>
         </div>
