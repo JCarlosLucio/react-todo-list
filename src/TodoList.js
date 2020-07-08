@@ -41,7 +41,7 @@ export default class TodoList extends Component {
   }
   render() {
     return (
-      <div>
+      <div className="TodoList">
         <h1>Todo List</h1>
         <NewTodoForm addTodo={this.addTodo} />
         <ul>
