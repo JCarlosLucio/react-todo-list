@@ -1,3 +1,19 @@
+.Todo {
+  display: flex;
+  margin: 0 -3rem 4px;
+  padding: 1.1rem 3rem;
+  height: 4rem;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  position: relative;
+}
+
+.Todo:nth-last-child(1) {
+  border-radius: 0 0 1.5rem 1.5rem;
+}
+
 .Todo-done {
   color: grey;
   text-decoration: line-through;
