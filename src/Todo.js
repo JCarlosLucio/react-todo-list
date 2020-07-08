@@ -37,7 +37,7 @@ export default class Todo extends Component {
     let result;
     if (this.state.isEditing) {
       result = (
-        <div>
+        <div className="Todo">
           <form onSubmit={this.handleUpdateTodo}>
             <input
               type="text"
@@ -52,7 +52,7 @@ export default class Todo extends Component {
       );
     } else {
       result = (
-        <div>
+        <div className="Todo">
           <li
             onClick={this.handleToggleDone}
             className={this.props.done ? 'Todo-done' : undefined}
