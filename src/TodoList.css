@@ -26,6 +26,6 @@
 }
 
 .TodoList ul {
-  margin-top: 2rem;
+  padding: 0 3rem;
   list-style-type: none;
 }
