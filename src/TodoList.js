@@ -42,8 +42,10 @@ export default class TodoList extends Component {
   render() {
     return (
       <div className="TodoList">
-        <h1>Todo List</h1>
-        <NewTodoForm addTodo={this.addTodo} />
+        <div className="TodoList-header">
+          <h1>React Todo List</h1>
+          <NewTodoForm addTodo={this.addTodo} />
+        </div>
         <ul>
           {this.state.todos.map((todo) => (
             <Todo
