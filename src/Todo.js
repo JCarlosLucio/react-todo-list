@@ -53,12 +53,12 @@ export default class Todo extends Component {
     } else {
       result = (
         <div>
-          <span
+          <li
             onClick={this.handleToggleDone}
             className={this.props.done ? 'Todo-done' : undefined}
           >
             {this.props.todo}
-          </span>
+          </li>
           <button onClick={this.toggleForm}>Edit</button>
           <button onClick={this.handleDeleteTodo}>X</button>
         </div>
