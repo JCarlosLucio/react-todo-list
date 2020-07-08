@@ -1,0 +1,9 @@
+.TodoList {
+  width: 35rem;
+  min-height: 15rem;
+  margin: 1rem auto;
+  border-radius: 1.5rem;
+  box-shadow: 5px 5px 7px rgba(0, 0, 0, 0.233),
+    -5px -5px 7px rgba(0, 0, 0, 0.233);
+  background: #22193a;
+}
