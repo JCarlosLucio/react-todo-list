@@ -32,7 +32,7 @@
   display: block;
   width: 0%;
   height: 2px;
-  background: rgb(255, 255, 255);
+  background: white;
   animation: strikeitem 0.3s ease-in 0s forwards;
 }
 @keyframes strikeitem {
@@ -52,7 +52,7 @@
   background: none;
   -webkit-appearance: none;
   cursor: pointer;
-  color: #fff;
+  color: white;
   transition: color 200ms ease-out;
 }
 .Todo-btns button:hover {
@@ -66,24 +66,26 @@
 .Todo-edit-form input {
   flex-grow: 1;
   padding: 0 1em;
-  border: none;
-  border-radius: 0.2rem;
   font-size: initial;
-  color: white;
-  background: #392352;
+  background-color: #392352;
 }
 .Todo-edit-form button {
   padding: 0 1.3rem;
   margin-left: 5px;
-  border: none;
-  border-radius: 0.2rem;
   font-weight: 600;
   text-transform: uppercase;
   cursor: pointer;
-  color: white;
   background-color: #fa26a0;
-  transition: background 0.2s ease-out;
+  transition: background-color 200ms ease-out;
 }
 .Todo-edit-form button:hover {
   background-color: #af1b71;
+}
+.Todo-edit-form input,
+.Todo-edit-form button {
+  height: 3rem;
+  border: none;
+  border-radius: 0.2rem;
+  font-family: 'Open Sans', sans-serif;
+  color: white;
 }
