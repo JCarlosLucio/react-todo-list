@@ -30,6 +30,7 @@ export default class NewTodoForm extends Component {
           id="newTodo"
           placeholder="New Todo"
           name="todo"
+          required={true}
           value={this.state.todo}
           onChange={this.handleChange}
         />
