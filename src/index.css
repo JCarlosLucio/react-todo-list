@@ -13,3 +13,11 @@ body {
   color: white;
   background: #1e132d;
 }
+
+/* For 768px Screens and up (Ipad, Desktop) */
+@media screen and (min-width: 47.99rem) {
+  html,
+  body {
+    font-size: 1.1rem;
+  }
+}
