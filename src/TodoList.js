@@ -14,6 +14,9 @@ export default class TodoList extends Component {
     this.updateTodo = this.updateTodo.bind(this);
     this.toggleDone = this.toggleDone.bind(this);
   }
+  componentDidUpdate() {
+    localStorage.setItem('todos', JSON.stringify(this.state.todos));
+  }
 
   addTodo(newTodo) {
     this.setState({ todos: [...this.state.todos, newTodo] });
