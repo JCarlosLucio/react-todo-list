@@ -2,7 +2,8 @@
   display: flex;
   margin: 0 -3rem 4px;
   padding: 1.1rem 3rem;
-  height: 4rem;
+  height: 5rem;
+  font-size: 1.6rem;
   justify-content: space-between;
   align-items: center;
   background: rgba(0, 0, 0, 0.2);
@@ -65,6 +66,7 @@
 }
 .Todo-edit-form input {
   flex-grow: 1;
+  width: 19rem;
   padding: 0 1em;
   font-size: initial;
   background-color: #392352;
@@ -73,6 +75,7 @@
   padding: 0 1.3rem;
   margin-left: 5px;
   font-weight: 700;
+  font-size: 1.1rem;
   text-transform: uppercase;
   cursor: pointer;
   background-color: #fa26a0;
@@ -83,9 +86,24 @@
 }
 .Todo-edit-form input,
 .Todo-edit-form button {
-  height: 3rem;
+  height: 4rem;
   border: none;
   border-radius: 0.2rem;
   font-family: 'Open Sans', sans-serif;
   color: white;
+}
+
+/* For 768px Screens and up (Ipad, Desktop) */
+@media screen and (min-width: 47.99rem) {
+  .Todo {
+    font-size: 1rem;
+    height: 4rem;
+  }
+  .Todo-edit-form button {
+    font-size: 0.7rem;
+  }
+  .Todo-edit-form input,
+  .Todo-edit-form button {
+    height: 3rem;
+  }
 }

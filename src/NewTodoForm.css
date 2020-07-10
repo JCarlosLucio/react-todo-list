@@ -7,10 +7,11 @@
 .NewTodoForm label {
   min-width: 100%;
   margin-bottom: 0.5rem;
-  font-size: 1.3rem;
+  font-size: 1.8rem;
 }
 .NewTodoForm input {
   flex-grow: 1;
+  width: 15rem;
   padding: 0 1em;
   font-size: initial;
   background-color: #392352;
@@ -18,7 +19,8 @@
 .NewTodoForm button {
   padding: 0 1.3rem;
   margin-left: 5px;
-  font-weight: 600;
+  font-weight: 700;
+  font-size: 1.1rem;
   text-transform: uppercase;
   cursor: pointer;
   background-color: #fa26a0;
@@ -29,7 +31,7 @@
 }
 .NewTodoForm input,
 .NewTodoForm button {
-  height: 3rem;
+  height: 4rem;
   border: none;
   border-radius: 0.2rem;
   font-family: 'Open Sans', sans-serif;
