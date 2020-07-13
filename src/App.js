@@ -6,7 +6,7 @@ function App() {
   return (
     <div className="App">
       <TodoList />
-      <div>
+      <div className="App-link">
         <a href="https://github.com/JCarlosLucio/todo-list">
           Made by Lucio <i className="fab fa-github-alt" aria-hidden="true" />
         </a>
