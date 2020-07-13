@@ -7,7 +7,7 @@ function App() {
     <div className="App">
       <TodoList />
       <div className="App-link">
-        <a href="https://github.com/JCarlosLucio/todo-list">
+        <a href="https://github.com/JCarlosLucio/react-todo-list">
           Made by Lucio <i className="fab fa-github-alt" aria-hidden="true" />
         </a>
       </div>
