@@ -1,0 +1,22 @@
+.App-link {
+  margin-top: 1.5rem;
+  width: 100%;
+  text-align: center;
+}
+
+.App-link a {
+  color: #b75eff8a;
+  text-decoration: none;
+  letter-spacing: 2px;
+  font-size: 1rem;
+  transition: color 300ms ease-out;
+}
+.App-link a:hover {
+  color: #fa26a280;
+}
+
+@media screen and (min-width: 47.99rem) {
+  .App-link a {
+    font-size: 0.8rem;
+  }
+}
