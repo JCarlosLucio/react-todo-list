@@ -10,6 +10,9 @@ function TodoList() {
   const addTodo = (newTodo) => {
     setTodos([...todos, newTodo]);
   };
+  const deleteTodo = (id) => {
+    setTodos(todos.filter((todo) => todo.id !== id));
+  };
 
   return (
     <div className="TodoList">
