@@ -13,6 +13,15 @@ function TodoList() {
   const deleteTodo = (id) => {
     setTodos(todos.filter((todo) => todo.id !== id));
   };
+  const updateTodo = (id, updatedTodo) => {
+    const updatedTodos = todos.map((todo) => {
+      if (todo.id === id) {
+        return { ...todo, todo: updatedTodo };
+      }
+      return todo;
+    });
+    setTodos(updatedTodos);
+  };
 
   return (
     <div className="TodoList">
