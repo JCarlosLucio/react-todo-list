@@ -5,7 +5,11 @@ import './TodoList.css';
 
 function TodoList() {
   const initialTodos = [];
-  const [todos, setState] = useState(initialTodos);
+  const [todos, setTodos] = useState(initialTodos);
+
+  const addTodo = (newTodo) => {
+    setTodos([...todos, newTodo]);
+  };
 
   return (
     <div className="TodoList">
