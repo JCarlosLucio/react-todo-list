@@ -22,6 +22,15 @@ function TodoList() {
     });
     setTodos(updatedTodos);
   };
+  const toggleDone = (id) => {
+    const updatedTodos = todos.map((todo) => {
+      if (todo.id === id) {
+        return { ...todo, done: !todo.done };
+      }
+      return todo;
+    });
+    setTodos(updatedTodos);
+  };
 
   return (
     <div className="TodoList">
