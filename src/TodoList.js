@@ -37,7 +37,7 @@ function TodoList() {
       <div className="TodoList-header">
         <h1>React Todo List</h1>
       </div>
-      {/* <NewTodoForm addTodo={this.addTodo} /> */}
+      <NewTodoForm addTodo={addTodo} />
       <ul>
         {todos.map((todo) => (
           <Todo
@@ -57,9 +57,8 @@ function TodoList() {
 
 export default TodoList;
 
-{
-  // import React, { Component } from 'react';
-  /* export default class TodoList extends Component {
+// import React, { Component } from 'react';
+/* export default class TodoList extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -127,4 +126,3 @@ export default TodoList;
     );
   }
 } */
-}
