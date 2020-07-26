@@ -15,7 +15,7 @@ function NewTodoForm({ addTodo }) {
         name="todo"
         required={true}
         value={todo}
-        // onChange={this.handleChange}
+        onChange={(e) => setTodo(e.target.value)}
       />
       <button>ADD TODO</button>
     </form>
