@@ -5,8 +5,14 @@ import './NewTodoForm.css';
 function NewTodoForm({ addTodo }) {
   const [todo, setTodo] = useState('');
   return (
-    <form className="NewTodoForm">
-      {/* onSubmit={this.handleSubmit} */}
+    <form
+      className="NewTodoForm"
+      onSubmit={(e) => {
+        e.preventDefault();
+        addTodo({ id: uuidv4(), todo: todo, done: false });
+        setTodo('');
+      }}
+    >
       <label htmlFor="newTodo">New Todo</label>
       <input
         type="text"
