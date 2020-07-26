@@ -14,7 +14,7 @@ function NewTodoForm({ addTodo }) {
         placeholder="New Todo"
         name="todo"
         required={true}
-        // value={this.state.todo}
+        value={todo}
         // onChange={this.handleChange}
       />
       <button>ADD TODO</button>
