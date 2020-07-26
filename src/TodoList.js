@@ -45,9 +45,9 @@ function TodoList() {
             id={todo.id}
             todo={todo.todo}
             done={todo.done}
-            // deleteTodo={this.deleteTodo}
-            // updateTodo={this.updateTodo}
-            // toggleDone={this.toggleDone}
+            deleteTodo={deleteTodo}
+            updateTodo={updateTodo}
+            toggleDone={toggleDone}
           />
         ))}
       </ul>
