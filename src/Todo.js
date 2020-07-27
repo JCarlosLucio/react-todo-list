@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './Todo.css';
 
-function Todo() {
+function Todo({ id, todo, done, deleteTodo, updateTodo, toggleDone }) {
   const [isEditing, setIsEditing] = useState(false);
   const [updatedTodo, setUpdatedTodo] = useState();
   let result;
