@@ -30,7 +30,7 @@ function Todo({ id, todo, done, deleteTodo, updateTodo, toggleDone }) {
           {todo}
         </li>
         <div className="Todo-btns">
-          <button onClick={this.toggleForm}>
+          <button onClick={() => setIsEditing(!isEditing)}>
             <i className="fas fa-pen-square" />
           </button>
           <button onClick={this.handleDeleteTodo}>
