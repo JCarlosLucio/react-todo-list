@@ -5,7 +5,7 @@ function Todo({ id, todo, done, deleteTodo, updateTodo, toggleDone }) {
   const [isEditing, setIsEditing] = useState(false);
   const [updatedTodo, setUpdatedTodo] = useState(todo);
   let result;
-  if (this.state.isEditing) {
+  if (isEditing) {
     result = (
       <div className="Todo">
         <form className="Todo-edit-form" onSubmit={this.handleUpdateTodo}>
@@ -13,7 +13,7 @@ function Todo({ id, todo, done, deleteTodo, updateTodo, toggleDone }) {
             type="text"
             name="updatedTodo"
             placeholder="Edit Todo"
-            value={this.state.updatedTodo}
+            value={updatedTodo}
             onChange={this.handleChange}
           />
           <button>Save</button>
@@ -25,9 +25,9 @@ function Todo({ id, todo, done, deleteTodo, updateTodo, toggleDone }) {
       <div className="Todo">
         <li
           onClick={this.handleToggleDone}
-          className={this.state.done ? 'Todo-todo done' : 'Todo-todo'}
+          className={done ? 'Todo-todo done' : 'Todo-todo'}
         >
-          {this.state.todo}
+          {todo}
         </li>
         <div className="Todo-btns">
           <button onClick={this.toggleForm}>
