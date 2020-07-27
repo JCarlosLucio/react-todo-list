@@ -14,7 +14,7 @@ function Todo({ id, todo, done, deleteTodo, updateTodo, toggleDone }) {
             name="updatedTodo"
             placeholder="Edit Todo"
             value={updatedTodo}
-            onChange={this.handleChange}
+            onChange={(e) => setUpdatedTodo(e.target.value)}
           />
           <button>Save</button>
         </form>
