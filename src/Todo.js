@@ -33,7 +33,7 @@ function Todo({ id, todo, done, deleteTodo, updateTodo, toggleDone }) {
           <button onClick={() => setIsEditing(!isEditing)}>
             <i className="fas fa-pen-square" />
           </button>
-          <button onClick={this.handleDeleteTodo}>
+          <button onClick={() => deleteTodo(id)}>
             <i className="fas fa-times-circle" />
           </button>
         </div>
