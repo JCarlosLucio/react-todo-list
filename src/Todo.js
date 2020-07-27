@@ -8,7 +8,14 @@ function Todo({ id, todo, done, deleteTodo, updateTodo, toggleDone }) {
   if (isEditing) {
     result = (
       <div className="Todo">
-        <form className="Todo-edit-form" onSubmit={this.handleUpdateTodo}>
+        <form
+          className="Todo-edit-form"
+          onSubmit={(e) => {
+            e.preventDefault();
+            updateTodo(id, updatedTodo);
+            setIsEditing(!isEditing);
+          }}
+        >
           <input
             type="text"
             name="updatedTodo"
