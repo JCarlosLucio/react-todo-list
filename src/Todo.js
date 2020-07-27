@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import './Todo.css';
 
 function Todo() {
+  const [isEditing, setIsEditing] = useState(false);
   let result;
   if (this.state.isEditing) {
     result = (
