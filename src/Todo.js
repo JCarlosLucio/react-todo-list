@@ -24,7 +24,7 @@ function Todo({ id, todo, done, deleteTodo, updateTodo, toggleDone }) {
     result = (
       <div className="Todo">
         <li
-          onClick={this.handleToggleDone}
+          onClick={() => toggleDone(id)}
           className={done ? 'Todo-todo done' : 'Todo-todo'}
         >
           {todo}
