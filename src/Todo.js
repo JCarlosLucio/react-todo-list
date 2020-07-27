@@ -3,6 +3,7 @@ import './Todo.css';
 
 function Todo() {
   const [isEditing, setIsEditing] = useState(false);
+  const [updatedTodo, setUpdatedTodo] = useState();
   let result;
   if (this.state.isEditing) {
     result = (
