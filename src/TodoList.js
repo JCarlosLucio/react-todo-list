@@ -21,12 +21,9 @@ function TodoList() {
     setTodos(todos.filter((todo) => todo.id !== id));
   };
   const updateTodo = (id, updatedTodo) => {
-    const updatedTodos = todos.map((todo) => {
-      if (todo.id === id) {
-        return { ...todo, todo: updatedTodo };
-      }
-      return todo;
-    });
+    const updatedTodos = todos.map(
+      (todo) => (todo.id === id ? { ...todo, todo: updatedTodo } : todo)
+    );
     setTodos(updatedTodos);
   };
   const toggleDone = (id) => {
