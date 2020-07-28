@@ -27,12 +27,9 @@ function TodoList() {
     setTodos(updatedTodos);
   };
   const toggleDone = (id) => {
-    const updatedTodos = todos.map((todo) => {
-      if (todo.id === id) {
-        return { ...todo, done: !todo.done };
-      }
-      return todo;
-    });
+    const updatedTodos = todos.map(
+      (todo) => (todo.id === id ? { ...todo, done: !todo.done } : todo)
+    );
     setTodos(updatedTodos);
   };
 
