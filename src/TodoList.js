@@ -7,6 +7,13 @@ function TodoList() {
   const initialTodos = [];
   const [todos, setTodos] = useState(initialTodos);
 
+  useEffect(
+    () => {
+      localStorage.setItem('todos', JSON.stringify(todos));
+    },
+    [todos]
+  );
+
   const addTodo = (newTodo) => {
     setTodos([...todos, newTodo]);
   };
