@@ -20,9 +20,9 @@ function TodoList() {
   const deleteTodo = (id) => {
     setTodos(todos.filter((todo) => todo.id !== id));
   };
-  const updateTodo = (id, updatedTodo) => {
+  const updateTodo = (id, updatedTask) => {
     const updatedTodos = todos.map(
-      (todo) => (todo.id === id ? { ...todo, todo: updatedTodo } : todo)
+      (todo) => (todo.id === id ? { ...todo, task: updatedTask } : todo)
     );
     setTodos(updatedTodos);
   };
@@ -43,7 +43,7 @@ function TodoList() {
         {todos.map((todo) => (
           <Todo
             key={todo.id}
-            {...todo}
+            {...todo} // id, task, done
             deleteTodo={deleteTodo}
             updateTodo={updateTodo}
             toggleDone={toggleDone}
