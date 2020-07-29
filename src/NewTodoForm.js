@@ -3,14 +3,14 @@ import { v4 as uuidv4 } from 'uuid';
 import './NewTodoForm.css';
 
 function NewTodoForm({ addTodo }) {
-  const [todo, setTodo] = useState('');
+  const [task, setTask] = useState('');
   return (
     <form
       className="NewTodoForm"
       onSubmit={(e) => {
         e.preventDefault();
-        addTodo({ id: uuidv4(), todo: todo, done: false });
-        setTodo('');
+        addTodo({ id: uuidv4(), task: task, done: false });
+        setTask('');
       }}
     >
       <label htmlFor="newTodo">New Todo</label>
@@ -20,8 +20,8 @@ function NewTodoForm({ addTodo }) {
         placeholder="New Todo"
         name="todo"
         required={true}
-        value={todo}
-        onChange={(e) => setTodo(e.target.value)}
+        value={task}
+        onChange={(e) => setTask(e.target.value)}
       />
       <button>ADD TODO</button>
     </form>
