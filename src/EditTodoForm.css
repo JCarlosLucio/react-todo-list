@@ -1,0 +1,43 @@
+.EditTodoForm {
+  display: flex;
+  flex-wrap: wrap;
+}
+.EditTodoForm input {
+  flex-grow: 1;
+  width: 19rem;
+  padding: 0 1em;
+  font-size: initial;
+  background-color: #392352;
+}
+.EditTodoForm button {
+  padding: 0 1.3rem;
+  margin-left: 5px;
+  font-weight: 700;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  cursor: pointer;
+  background-color: #fa26a0;
+  transition: background-color 200ms ease-out;
+}
+.EditTodoForm button:hover {
+  background-color: #af1b71;
+}
+.EditTodoForm input,
+.EditTodoForm button {
+  height: 4rem;
+  border: none;
+  border-radius: 0.2rem;
+  font-family: 'Open Sans', sans-serif;
+  color: white;
+}
+
+/* For 768px Screens and up (Ipad, Desktop) */
+@media screen and (min-width: 47.99rem) {
+  .EditTodoForm button {
+    font-size: 0.7rem;
+  }
+  .EditTodoForm input,
+  .EditTodoForm button {
+    height: 3rem;
+  }
+}
