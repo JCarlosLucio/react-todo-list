@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import './Todo.css';
 
-function Todo({ id, todo, done, deleteTodo, updateTodo, toggleDone }) {
+function Todo({ id, task, done, deleteTodo, updateTodo, toggleDone }) {
   const [isEditing, setIsEditing] = useState(false);
-  const [updatedTodo, setUpdatedTodo] = useState(todo);
+  const [updatedTask, setUpdatedTask] = useState(task);
   let result;
   if (isEditing) {
     result = (
@@ -12,16 +12,16 @@ function Todo({ id, todo, done, deleteTodo, updateTodo, toggleDone }) {
           className="Todo-edit-form"
           onSubmit={(e) => {
             e.preventDefault();
-            updateTodo(id, updatedTodo);
+            updateTodo(id, updatedTask);
             setIsEditing(!isEditing);
           }}
         >
           <input
             type="text"
-            name="updatedTodo"
+            name="editTodo"
             placeholder="Edit Todo"
-            value={updatedTodo}
-            onChange={(e) => setUpdatedTodo(e.target.value)}
+            value={updatedTask}
+            onChange={(e) => setUpdatedTask(e.target.value)}
           />
           <button>Save</button>
         </form>
@@ -34,7 +34,7 @@ function Todo({ id, todo, done, deleteTodo, updateTodo, toggleDone }) {
           onClick={() => toggleDone(id)}
           className={done ? 'Todo-todo done' : 'Todo-todo'}
         >
-          {todo}
+          {task}
         </li>
         <div className="Todo-btns">
           <button onClick={() => setIsEditing(!isEditing)}>
