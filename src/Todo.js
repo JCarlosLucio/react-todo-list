@@ -1,30 +1,20 @@
 import React, { useState } from 'react';
+import EditTodoForm from './EditTodoForm';
 import './Todo.css';
 
 function Todo({ id, task, done, deleteTodo, updateTodo, toggleDone }) {
   const [isEditing, setIsEditing] = useState(false);
-  const [updatedTask, setUpdatedTask] = useState(task);
   let result;
   if (isEditing) {
     result = (
       <div className="Todo">
-        <form
-          className="Todo-edit-form"
-          onSubmit={(e) => {
-            e.preventDefault();
-            updateTodo(id, updatedTask);
-            setIsEditing(!isEditing);
-          }}
-        >
-          <input
-            type="text"
-            name="editTodo"
-            placeholder="Edit Todo"
-            value={updatedTask}
-            onChange={(e) => setUpdatedTask(e.target.value)}
-          />
-          <button>Save</button>
-        </form>
+        <EditTodoForm
+          id={id}
+          task={task}
+          updateTodo={updateTodo}
+          isEditing={isEditing}
+          setIsEditing={setIsEditing}
+        />
       </div>
     );
   } else {
