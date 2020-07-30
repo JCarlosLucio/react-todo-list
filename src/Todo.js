@@ -12,7 +12,6 @@ function Todo({ id, task, done, deleteTodo, updateTodo, toggleDone }) {
           id={id}
           task={task}
           updateTodo={updateTodo}
-          isEditing={isEditing}
           toggleIsEditing={toggleIsEditing}
         />
       ) : (
