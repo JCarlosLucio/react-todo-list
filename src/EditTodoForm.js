@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './EditTodoForm.css';
 
-function EditTodoForm({ id, task, updateTodo, isEditing, setIsEditing }) {
+function EditTodoForm({ id, task, updateTodo, toggleIsEditing }) {
   const [updatedTask, setUpdatedTask] = useState(task);
   return (
     <form
@@ -9,7 +9,7 @@ function EditTodoForm({ id, task, updateTodo, isEditing, setIsEditing }) {
       onSubmit={(e) => {
         e.preventDefault();
         updateTodo(id, updatedTask);
-        setIsEditing(!isEditing);
+        toggleIsEditing();
       }}
     >
       <input
