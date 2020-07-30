@@ -1,9 +1,10 @@
-import React, { useState } from 'react';
+import React from 'react';
+import useToggleState from './hooks/useToggleState';
 import EditTodoForm from './EditTodoForm';
 import './Todo.css';
 
 function Todo({ id, task, done, deleteTodo, updateTodo, toggleDone }) {
-  const [isEditing, setIsEditing] = useState(false);
+  const [isEditing, toggleIsEditing] = useToggleState(false);
   return (
     <div className="Todo">
       {isEditing ? (
