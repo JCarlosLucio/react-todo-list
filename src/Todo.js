@@ -13,7 +13,7 @@ function Todo({ id, task, done, deleteTodo, updateTodo, toggleDone }) {
           task={task}
           updateTodo={updateTodo}
           isEditing={isEditing}
-          setIsEditing={setIsEditing}
+          toggleIsEditing={toggleIsEditing}
         />
       ) : (
         <React.Fragment>
@@ -24,7 +24,7 @@ function Todo({ id, task, done, deleteTodo, updateTodo, toggleDone }) {
             {task}
           </li>
           <div className="Todo-btns">
-            <button onClick={() => setIsEditing(!isEditing)}>
+            <button onClick={toggleIsEditing}>
               <i className="fas fa-pen-square" />
             </button>
             <button onClick={() => deleteTodo(id)}>
