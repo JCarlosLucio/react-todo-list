@@ -1,8 +1,9 @@
-import React, { useState } from 'react';
+import React from 'react';
+import useInputState from './hooks/useInputState';
 import './EditTodoForm.css';
 
 function EditTodoForm({ id, task, updateTodo, toggleIsEditing }) {
-  const [updatedTask, setUpdatedTask] = useState(task);
+  const [updatedTask, handleChange] = useInputState(task);
   return (
     <form
       className="EditTodoForm"
@@ -17,7 +18,7 @@ function EditTodoForm({ id, task, updateTodo, toggleIsEditing }) {
         name="updatedTask"
         placeholder="Edit Todo"
         value={updatedTask}
-        onChange={(e) => setUpdatedTask(e.target.value)}
+        onChange={handleChange}
       />
       <button>Save</button>
     </form>
