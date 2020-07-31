@@ -19,6 +19,7 @@ function EditTodoForm({ id, task, updateTodo, toggleIsEditing }) {
         placeholder="Edit Todo"
         value={updatedTask}
         onChange={handleChange}
+        autoFocus
       />
       <button>Save</button>
     </form>
