@@ -1,16 +1,17 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { v4 as uuidv4 } from 'uuid';
+import useInputState from './hooks/useInputState';
 import './NewTodoForm.css';
 
 function NewTodoForm({ addTodo }) {
-  const [task, setTask] = useState('');
+  const [task, handleChange, reset] = useInputState('');
   return (
     <form
       className="NewTodoForm"
       onSubmit={(e) => {
         e.preventDefault();
         addTodo({ id: uuidv4(), task: task, done: false });
-        setTask('');
+        reset();
       }}
     >
       <label htmlFor="newTodo">New Todo</label>
@@ -21,7 +22,7 @@ function NewTodoForm({ addTodo }) {
         name="todo"
         required={true}
         value={task}
-        onChange={(e) => setTask(e.target.value)}
+        onChange={handleChange}
       />
       <button>ADD TODO</button>
     </form>
