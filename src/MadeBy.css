@@ -1,22 +1,22 @@
-.App-link {
+.MadeBy {
   margin-top: 1.5rem;
   width: 100%;
   text-align: center;
 }
 
-.App-link a {
+.MadeBy a {
   color: #b75eff8a;
   text-decoration: none;
   letter-spacing: 2px;
   font-size: 1.1rem;
   transition: color 300ms ease-out;
 }
-.App-link a:hover {
+.MadeBy a:hover {
   color: #fa26a280;
 }
 
 @media screen and (min-width: 47.99rem) {
-  .App-link a {
+  .MadeBy a {
     font-size: 0.8rem;
   }
 }
