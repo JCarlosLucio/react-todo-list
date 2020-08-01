@@ -1,17 +1,13 @@
 import React from 'react';
 import TodoList from './TodoList';
-import './App.css';
+import MadeBy from './MadeBy';
 
 function App() {
   return (
-    <div className="App">
+    <React.Fragment>
       <TodoList />
-      <div className="App-link">
-        <a href="https://github.com/JCarlosLucio/react-todo-list">
-          Made by Lucio <i className="fab fa-github-alt" aria-hidden="true" />
-        </a>
-      </div>
-    </div>
+      <MadeBy link="https://github.com/JCarlosLucio/react-todo-list" />
+    </React.Fragment>
   );
 }
 
