@@ -1,10 +1,12 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { v4 as uuidv4 } from 'uuid';
 import useInputState from './hooks/useInputState';
+import { DispatchContext } from './contexts/todo.context';
 import './NewTodoForm.css';
 
 function NewTodoForm({ addTodo }) {
   const [task, handleChange, reset] = useInputState('');
+  const dispatch = useContext(DispatchContext);
   return (
     <form
       className="NewTodoForm"
