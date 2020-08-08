@@ -4,7 +4,7 @@ import EditTodoForm from './EditTodoForm';
 import { DispatchContext } from './contexts/todo.context';
 import './Todo.css';
 
-function Todo({ id, task, done, updateTodo, deleteTodo }) {
+function Todo({ id, task, done, updateTodo }) {
   const dispatch = useContext(DispatchContext);
   const [isEditing, toggleIsEditing] = useToggleState(false);
   return (
@@ -28,7 +28,7 @@ function Todo({ id, task, done, updateTodo, deleteTodo }) {
             <button onClick={toggleIsEditing}>
               <i className="fas fa-pen-square" />
             </button>
-            <button onClick={() => deleteTodo(id)}>
+            <button onClick={() => dispatch({ type: 'DELETE', id })}>
               <i className="fas fa-times-circle" />
             </button>
           </div>
