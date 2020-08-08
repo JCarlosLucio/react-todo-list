@@ -1,9 +1,11 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import useToggleState from './hooks/useToggleState';
 import EditTodoForm from './EditTodoForm';
+import { DispatchContext } from './contexts/todo.context';
 import './Todo.css';
 
-function Todo({ id, task, done, deleteTodo, updateTodo, toggleDone }) {
+function Todo({ id, task, done, updateTodo, deleteTodo, toggleDone }) {
+  const dispatch = useContext(DispatchContext);
   const [isEditing, toggleIsEditing] = useToggleState(false);
   return (
     <div className="Todo">
