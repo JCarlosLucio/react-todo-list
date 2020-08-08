@@ -4,7 +4,7 @@ import EditTodoForm from './EditTodoForm';
 import { DispatchContext } from './contexts/todo.context';
 import './Todo.css';
 
-function Todo({ id, task, done, updateTodo, deleteTodo, toggleDone }) {
+function Todo({ id, task, done, updateTodo, deleteTodo }) {
   const dispatch = useContext(DispatchContext);
   const [isEditing, toggleIsEditing] = useToggleState(false);
   return (
@@ -19,7 +19,7 @@ function Todo({ id, task, done, updateTodo, deleteTodo, toggleDone }) {
       ) : (
         <React.Fragment>
           <li
-            onClick={() => toggleDone(id)}
+            onClick={() => dispatch({ type: 'TOGGLE_DONE', id })}
             className={done ? 'Todo-todo done' : 'Todo-todo'}
           >
             {task}
