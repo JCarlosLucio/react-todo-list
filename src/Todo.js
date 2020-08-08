@@ -4,18 +4,13 @@ import EditTodoForm from './EditTodoForm';
 import { DispatchContext } from './contexts/todo.context';
 import './Todo.css';
 
-function Todo({ id, task, done, updateTodo }) {
+function Todo({ id, task, done }) {
   const dispatch = useContext(DispatchContext);
   const [isEditing, toggleIsEditing] = useToggleState(false);
   return (
     <div className="Todo">
       {isEditing ? (
-        <EditTodoForm
-          id={id}
-          task={task}
-          updateTodo={updateTodo}
-          toggleIsEditing={toggleIsEditing}
-        />
+        <EditTodoForm id={id} task={task} toggleIsEditing={toggleIsEditing} />
       ) : (
         <React.Fragment>
           <li
