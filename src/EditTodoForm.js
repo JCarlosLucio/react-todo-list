@@ -4,6 +4,7 @@ import { DispatchContext } from './contexts/todo.context';
 import './EditTodoForm.css';
 
 function EditTodoForm({ id, task, updateTodo, toggleIsEditing }) {
+  const dispatch = useContext(DispatchContext);
   const [updatedTask, handleChange] = useInputState(task);
   return (
     <form
