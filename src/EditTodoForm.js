@@ -1,5 +1,6 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import useInputState from './hooks/useInputState';
+import { DispatchContext } from './contexts/todo.context';
 import './EditTodoForm.css';
 
 function EditTodoForm({ id, task, updateTodo, toggleIsEditing }) {
