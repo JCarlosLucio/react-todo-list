@@ -3,7 +3,7 @@ import useInputState from './hooks/useInputState';
 import { DispatchContext } from './contexts/todo.context';
 import './EditTodoForm.css';
 
-function EditTodoForm({ id, task, updateTodo, toggleIsEditing }) {
+function EditTodoForm({ id, task, toggleIsEditing }) {
   const dispatch = useContext(DispatchContext);
   const [updatedTask, handleChange] = useInputState(task);
   return (
@@ -11,7 +11,7 @@ function EditTodoForm({ id, task, updateTodo, toggleIsEditing }) {
       className="EditTodoForm"
       onSubmit={(e) => {
         e.preventDefault();
-        updateTodo(id, updatedTask);
+        dispatch({ type: 'UPDATE', id, updatedTask });
         toggleIsEditing();
       }}
     >
