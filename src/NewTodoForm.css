@@ -15,7 +15,23 @@
   padding: 0 1em;
   font-size: initial;
   background-color: #392352;
+  transition: background-color 600ms ease;
 }
+.NewTodoForm input:focus {
+  outline: none;
+  background-color: #41295e;
+}
+.NewTodoForm input:required {
+  box-shadow: none;
+}
+.NewTodoForm input:invalid {
+  box-shadow: 0 0 3px rgba(255, 255, 255, 0);
+}
+.NewTodoForm input::placeholder {
+  color: rgb(255, 255, 255);
+  opacity: 0.5;
+}
+
 .NewTodoForm button {
   padding: 0 1.3rem;
   margin-left: 5px;
