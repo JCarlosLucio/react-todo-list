@@ -33,4 +33,4 @@ function Todo({ id, task, done }) {
   );
 }
 
-export default Todo;
+export default memo(Todo);
