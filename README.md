@@ -4,6 +4,8 @@ from The Odin Project's [curriculum](https://www.theodinproject.com/courses/java
 ## Overview
 A Simple TODO LIST made using REACT
 
+Updated to use hooks, context, and reducers.
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
